@@ -46,7 +46,7 @@ export default class ServicoCtrl{
     }
 
     alterar(requisicao, resposta){
-        if ((requisicao.method == "PUT" || requisicao.method == "PAT") && requisicao.is("application/json")){
+        if ((requisicao.method == "PUT" || requisicao.method == "PATCH") && requisicao.is("application/json")){
             const dados = requisicao.body;
             //pseudo validação
             if (dados.id>0 && dados.nome && dados.descricao && dados.valor>=0 && dados.urlImagem && dados.tempoInicioAtendimento>0 && dados.tempoSoluca>0)
